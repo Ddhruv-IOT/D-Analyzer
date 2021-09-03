@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep  3 00:04:15 2021
+
+@author: ACER
+"""
+
+import os
+import time
+
+print("start")
+
+time.sleep(2)
+
+os.system("pip install nltk")
+os.system("pip install streamlit")
+os.system("pip install wordcloud")
+
+time.sleep(10)
+
+import nltk
+nltk.download('vader_lexicon')
+nltk.download('punkt')
+
+time.sleep(20)
+os.system("streamlit run text_analyzer.py")
