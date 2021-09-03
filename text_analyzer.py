@@ -9,6 +9,7 @@ import speech_recognition as sr
 import nltk
 nltk.download('vader_lexicon')
 nltk.download('punkt')
+nltk.download('stopwords')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
