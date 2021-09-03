@@ -6,9 +6,9 @@
 
 import streamlit as st
 import speech_recognition as sr
-# import nltk
-# nltk.download('vader_lexicon')
-# nltk.download('punkt')
+import nltk
+nltk.download('vader_lexicon')
+nltk.download('punkt')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
