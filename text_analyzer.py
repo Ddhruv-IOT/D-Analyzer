@@ -177,11 +177,14 @@ def word_finder(find_word, message):
     """ A function to find word in given text """
     find_word = find_word.strip()
 
-    if (find_word is not None) and (find_word.casefold() in message.casefold()):
+    if (find_word != "Enter a word") and (find_word.casefold() in message.casefold()):
         st.success(f"The given word {find_word} is Found!!")
         find_word_highlight = f"""<span style="color:red">{find_word.upper()}</span>"""
         occurences = message.replace(find_word.casefold(), find_word_highlight)
         markdown_runner(occurences)
+
+    elif find_word == "Enter a word":
+        st.write()
 
     else:
         st.error(f"The given word {find_word} is not Found!!")
@@ -271,7 +274,7 @@ def setter_func():
     find_words = st.sidebar.radio("Select", typ)
 
     if find_words in typ[0]:
-        find_word = st.sidebar.text_input("Enter here", value=None)
+        find_word = st.sidebar.text_input("Enter here", value="Enter a word")
 
     else:
         find_word = None
