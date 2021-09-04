@@ -1,6 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 22 4:04:15 2021
+
+@author: ACER
+
+D. Analyzer is an app made in python,
+to give analyze the test or voice-based input.
+It can help get the sentiment of text,
+word cloud, summary, word count,
+char count, and line count.
+
+An App by Ddhruv Arora
+"""
+
 # pylint: disable = E1121
 # pylint: disable = W0703
-# pylint: disable = C0114
 # pylint: disable = C0206
 
 
@@ -205,8 +219,6 @@ def text_analysis(selected_word_count, find_word):
     if file_bytes is not None and file_bytes.type.lower() in "text/plain":
         st.success(f"Successfully Uploaded {file_bytes.name}")
         markdown_runner("""<hr/>""")
-        # st.write(file_bytes.type.lower())
-
         message = file_bytes.read().decode()
         analyser(message, selected_word_count, find_word)
 
