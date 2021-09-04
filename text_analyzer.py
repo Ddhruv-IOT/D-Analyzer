@@ -13,6 +13,7 @@ char count, and line count.
 An App by Ddhruv Arora
 """
 
+
 # pylint: disable = E1121
 # pylint: disable = W0703
 # pylint: disable = C0206
@@ -176,7 +177,7 @@ def word_finder(find_word, message):
     """ A function to find word in given text """
     find_word = find_word.strip()
 
-    if find_word is not None and find_word in message:
+    if find_word is not None and find_word.lower() in message.lower():
         st.success(f"The given word {find_word} is Found!!")
         find_word_highlight = f"""<span style="color:red">{find_word}</span>"""
         occurences = message.replace(find_word, find_word_highlight)
@@ -284,3 +285,4 @@ def setter_func():
 if __name__ == '__main__':
     intro_func()
     setter_func()
+  
