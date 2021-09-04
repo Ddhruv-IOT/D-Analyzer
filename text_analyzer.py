@@ -189,7 +189,7 @@ def word_finder(find_word, message):
 
 @decorator
 def play_audio(audio_bytes):
-    """ A function to show to audio provided as input"""
+    """ A function to show to audio provided as input """
     st.audio(audio_bytes, format=r'audio/ogg')
 
 
