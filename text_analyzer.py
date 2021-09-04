@@ -1,21 +1,37 @@
-# pylint: disable = E1121
-# pylint: disable = W0703
-# pylint: disable = C0114
-# pylint: disable = C0206
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 22 4:04:15 2021
+
+@author: ACER
+
+D. Analyzer is an app made in python,
+to give analyze the test or voice-based input.
+It can help get the sentiment of text,
+word cloud, summary, word count,
+char count, and line count.
+
+An App by Ddhruv Arora
+"""
+
+#pylint: disable = E1121
+#pylint: disable = W0703
+#pylint: disable = C0206
 
 
 import streamlit as st
 import speech_recognition as sr
 import nltk
-nltk.download('vader_lexicon')
-nltk.download('punkt')
-nltk.download('stopwords')
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
+
+nltk.download('vader_lexicon')
+nltk.download('punkt')
+nltk.download('stopwords')
 
 
 def markdown_runner(md_code):
@@ -160,7 +176,7 @@ def word_finder(find_word, message):
     """ A function to find word in given text """
     find_word = find_word.strip()
 
-    if find_word is not None and find_word in message:
+    if find_word is not None and find_word.lower() in message.lower():
         st.success(f"The given word {find_word} is Found!!")
         find_word_highlight = f"""<span style="color:red">{find_word}</span>"""
         occurences = message.replace(find_word, find_word_highlight)
@@ -200,10 +216,9 @@ def text_analysis(selected_word_count, find_word):
 
     file_bytes = st.file_uploader("uplaod a text file", type="txt", key="1")
 
-    if file_bytes is not None:
+    if file_bytes is not None and file_bytes.type.lower() in "text/plain":
         st.success(f"Successfully Uploaded {file_bytes.name}")
         markdown_runner("""<hr/>""")
-
         message = file_bytes.read().decode()
         analyser(message, selected_word_count, find_word)
 
@@ -221,7 +236,7 @@ def speech_analysis(selected_word_count, find_word):
 
     file_bytes = st.file_uploader("uplaod a text file", type="wav", key="1")
 
-    if file_bytes is not None:
+    if file_bytes is not None and file_bytes.type.lower() in "audio/wav":
         st.success(f"Successfully Uploaded {file_bytes.name}")
         markdown_runner("""<hr/>""")
         play_audio("Given Audio Input", file_bytes)
@@ -269,3 +284,7 @@ def setter_func():
 if __name__ == '__main__':
     intro_func()
     setter_func()
+    
+
+    
+
