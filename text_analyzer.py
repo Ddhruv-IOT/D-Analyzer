@@ -13,9 +13,10 @@ char count, and line count.
 An App by Ddhruv Arora
 """
 
-#pylint: disable = E1121
-#pylint: disable = W0703
-#pylint: disable = C0206
+
+# pylint: disable = E1121
+# pylint: disable = W0703
+# pylint: disable = C0206
 
 
 import streamlit as st
@@ -284,7 +285,4 @@ def setter_func():
 if __name__ == '__main__':
     intro_func()
     setter_func()
-    
-
-    
-
+  
