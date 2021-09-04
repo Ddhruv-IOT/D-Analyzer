@@ -176,10 +176,10 @@ def word_finder(find_word, message):
     """ A function to find word in given text """
     find_word = find_word.strip()
 
-    if find_word is not None and find_word in message:
+    if (find_word is not None) and (find_word.casefold() in message.casefold()):
         st.success(f"The given word {find_word} is Found!!")
-        find_word_highlight = f"""<span style="color:red">{find_word}</span>"""
-        occurences = message.replace(find_word, find_word_highlight)
+        find_word_highlight = f"""<span style="color:red">{find_word.upper()}</span>"""
+        occurences = message.replace(find_word.casefold(), find_word_highlight)
         markdown_runner(occurences)
 
     else:
