@@ -7,15 +7,17 @@
 import streamlit as st
 import speech_recognition as sr
 import nltk
-nltk.download('vader_lexicon')
-nltk.download('punkt')
-nltk.download('stopwords')
+
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
+
+nltk.download('vader_lexicon')
+nltk.download('punkt')
+nltk.download('stopwords')
 
 
 def markdown_runner(md_code):
@@ -200,9 +202,10 @@ def text_analysis(selected_word_count, find_word):
 
     file_bytes = st.file_uploader("uplaod a text file", type="txt", key="1")
 
-    if file_bytes is not None:
+    if file_bytes is not None and file_bytes.type.lower() in "text/plain":
         st.success(f"Successfully Uploaded {file_bytes.name}")
         markdown_runner("""<hr/>""")
+        # st.write(file_bytes.type.lower())
 
         message = file_bytes.read().decode()
         analyser(message, selected_word_count, find_word)
@@ -221,7 +224,7 @@ def speech_analysis(selected_word_count, find_word):
 
     file_bytes = st.file_uploader("uplaod a text file", type="wav", key="1")
 
-    if file_bytes is not None:
+    if file_bytes is not None and file_bytes.type.lower() in "audio/wav":
         st.success(f"Successfully Uploaded {file_bytes.name}")
         markdown_runner("""<hr/>""")
         play_audio("Given Audio Input", file_bytes)
