@@ -1,17 +1,17 @@
 # [D. Analyzer](https://d-analyzer.herokuapp.com/)
 
-## Overview
-D. Analyzer is an app made in python and frontend is powered by Streamlit.
-<br/> It is useful to analyze the given text or voice-based input.
+D. Analyzer is an app made in python. 
+<br/> The front-end is powered by Streamlit.
+<br/> It can analyze the text or voice-based input.
 
 ## Tools and Technologies Used:
 
 ### Python Modules used:
-- Streamlit: for fronted development.
+- Streamlit: for front-end development.
 - Speech_recognition: to convert audio to text for processing.
-- NLTK: for text based processing like removing stopwords, analyzing sentiments, etc.
-- Wordcloud: To make the word cloud for given input.
-- Matplotlib for displaying the word cloud on frontend.
+- NLTK: for text-based processing like removing stopwords, analyzing sentiments, etc.
+- Wordcloud: To make the word cloud for the given input.
+- Matplotlib for displaying the word cloud on the front-end.
 
 ### Softwares Used 
 - Spyder 5.0.3
@@ -39,16 +39,16 @@ D. Analyzer is an app made in python and frontend is powered by Streamlit.
 3. Run the following command:
 	<pre> streamlit run text_analyzer.py </pre>
 
-## Contributers: 
+## Contributors: 
 - [Aakriti Goyal](https://github.com/AakritiGoyal12458) 
 - [Ddhruv Arora](https://github.com/Ddhruv-IOT)
 
 ## Live Demo: 
 ### [Open App](https://d-analyzer.herokuapp.com/)
-App may take some time in loading.
+The app may take some time to load.
 
 ## Demo Video: 
-In case live demo is not working...
+In case the live demo is not working.
 *coming soon* 
 
 ## Known Issues:
