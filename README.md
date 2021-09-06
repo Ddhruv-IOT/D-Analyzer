@@ -1,26 +1,59 @@
-Disc:
+# [D. Analyzer](https://d-analyzer.herokuapp.com/)
 
-	This is project by Ddhruv Arora, you are free to use it, till 	the time proper credits are given to the developer.
-	Kindly check the liscence for more info.
+D. Analyzer is an app made in python. 
+<br/> The front-end is powered by Streamlit.
+<br/> It can analyze the text or voice-based input.
 
-Steps to setup:
- 	
-	Menthod 1:
-	open anaconda prompt/ spyder and run the file 				first_run_me.ipy
-	
-	This should take a while to run and app will be started.
-	If in mean time you encounter any error contact the dev.
-	
-	Method 2:
+## Tools and Technologies Used:
 
-	install the following:
-	pip install nltk 
-	pip install streamlit
-	pip install wordcloud
+### Python Modules used:
+- Streamlit: for front-end development.
+- Speech_recognition: to convert audio to text for processing.
+- NLTK: for text-based processing like removing stopwords, analyzing sentiments, etc.
+- Wordcloud: To make the word cloud for the given input.
+- Matplotlib for displaying the word cloud on the front-end.
 
-	Once they are installed, open spyder and uncomment line 9, 10 	and 11 and in spyder console type 
-	!streamlit run text_analyzer
-	then hit enter
+### Softwares Used 
+- Spyder 5.0.3
+- CMD
+- Git Bash
+- Heroku
 
-If you have any problem or doubt contact me: ddhruvarora2@gmail.com
-		
+### OS Used:
+- Windows 10 
+
+## Features  
+- sentiment analysis
+- word cloud
+- summary
+- word count
+- char count
+- line count
+- finding a specific word
+
+## Setting up on local machine: 
+1. Clone this repo on your system.
+2. Open CMD
+3. Install all the dependncies using requirements.txt:
+	<pre> pip install requirements.txt </pre>
+3. Run the following command:
+	<pre> streamlit run text_analyzer.py </pre>
+
+## Contributors: 
+- [Aakriti Goyal](https://github.com/AakritiGoyal12458) 
+- [Ddhruv Arora](https://github.com/Ddhruv-IOT)
+
+## Live Demo: 
+### [Open App](https://d-analyzer.herokuapp.com/)
+The app may take some time to load.
+
+## Demo Video: 
+In case the live demo is not working.
+*coming soon* 
+
+## Known Issues:
+- Exit button is not yet functional 
+
+# Thank you
+- Thank you all for using my app.
+- All suggestions are warmly welcomed.
