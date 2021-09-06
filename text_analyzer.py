@@ -5,8 +5,8 @@ Created on Sun Aug 22 4:04:15 2021
 @author: ACER
 
 D. Analyzer is an app made in python,
-to give analyze the test or voice-based input.
-It can help get the sentiment of text,
+to analyze the given text or voice-based input.
+It can help in getting the sentiment of text,
 word cloud, summary, word count,
 char count, and line count.
 
@@ -176,6 +176,7 @@ def text_descreption(message):
 def word_finder(find_word, message):
     """ A function to find word in given text """
     find_word = find_word.strip()
+    print(find_word)
 
     if (find_word != "Enter a word") and (find_word.casefold() in message.casefold()):
         st.success(f"The given word {find_word} is Found!!")
