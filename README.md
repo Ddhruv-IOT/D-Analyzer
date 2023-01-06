@@ -43,6 +43,9 @@ D. Analyzer is one stop solution to analyze text data or audio files.
 - [Aakriti Goyal](https://github.com/AakritiGoyal12458) 
 - [Ddhruv Arora](https://github.com/Ddhruv-IOT)
 
+## [Demo Video](https://github.com/Ddhruv-IOT/D-Analyzer/blob/main/demo%20data/Demo_video_full.mp4): 
+<p align="center"> <img src="https://github.com/Ddhruv-IOT/D-Analyzer/blob/main/demo%20data/demo.gif" alt="animated" /> </p>
+
 # Thank you
 - Thank you all for using my app.
 - All suggestions are warmly welcomed.
