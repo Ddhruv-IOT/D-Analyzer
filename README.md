@@ -1,8 +1,8 @@
-# [D. Analyzer](https://d-analyzer.herokuapp.com/)
+# D. Analyzer
 
-D. Analyzer is an app made in python. 
-<br/> The front-end is powered by Streamlit.
-<br/> It can analyze the text or voice-based input.
+D. Analyzer is one stop solution to analyze text data or audio files.
+<br/> It will count the number of words, characters, and lines, but these are the basics. 
+<br/> Let's explore something advanced that is none other than the fact that it makes word cloud, performs sentiment analysis, and generates the summary. It also helps find the occurrence of a specific word.
 
 ## Tools and Technologies Used:
 
@@ -42,17 +42,6 @@ D. Analyzer is an app made in python.
 ## Contributors: 
 - [Aakriti Goyal](https://github.com/AakritiGoyal12458) 
 - [Ddhruv Arora](https://github.com/Ddhruv-IOT)
-
-## Live Demo: 
-### [Open App](https://d-analyzer.herokuapp.com/)
-The app may take some time to load.
-
-## Demo Video: 
-In case the live demo is not working.
-*coming soon* 
-
-## Known Issues:
-- Exit button is not yet functional 
 
 # Thank you
 - Thank you all for using my app.
