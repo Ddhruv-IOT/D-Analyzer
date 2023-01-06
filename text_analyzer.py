@@ -280,8 +280,12 @@ def setter_func():
     else:
         find_word = None
 
-    st.sidebar.header("Click here to exit")
-    st.sidebar.button("Exit")
+    st.sidebar.header("Click here to reload")
+    btn = st.sidebar.button("Reload")
+
+    if btn: 
+        print("Click")
+        st.experimental_rerun()
 
     input_mode(selected_mode, selected_word_count, find_word)
 
