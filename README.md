@@ -32,12 +32,12 @@ D. Analyzer is one stop solution to analyze text data or audio files.
 - finding a specific word
 
 ## Setting up on local machine: 
-1. Clone this repo on your system.
-2. Open CMD
-3. Install all the dependncies using requirements.txt:
-	<pre> pip install requirements.txt </pre>
+1. Open Git bash and clone this repo using:
+	<code>git clone https://github.com/Ddhruv-IOT/D-Analyzer.git</code>
+2. Install the dependncies using requirements.txt:
+	<code>pip install -r requirements.txt</code>
 3. Run the following command:
-	<pre> streamlit run text_analyzer.py </pre>
+	<code>streamlit run text_analyzer.py</code>
 
 ## Contributors: 
 - [Aakriti Goyal](https://github.com/AakritiGoyal12458) 
