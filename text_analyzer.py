@@ -31,6 +31,7 @@ from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 
 nltk.download('vader_lexicon')
+nltk.download('punkt_tab')
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -102,11 +103,15 @@ def word_cloud(message, selected_word_count):
     wordcloud = WordCloud(background_color="white",
                           max_words=selected_word_count, stopwords=stopword).generate(message)
 
+    plt.figure(figsize=(10, 5))
+    plt.tight_layout(pad=0)
+    plt.figure(figsize=(10, 5))
+    plt.title("Word Cloud") 
+
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
-    st.set_option('deprecation.showPyplotGlobalUse', False)
     plt.show()
-    st.pyplot()
+    st.pyplot(plt.gcf())
 
 
 @decorator
@@ -219,7 +224,7 @@ def text_analysis(selected_word_count, find_word):
     markdown_runner("""<hr/>""")
     markdown_runner("""<p style="font_size:25px"> Upload Data </p>""")
 
-    file_bytes = st.file_uploader("uplaod a text file", type="txt", key="1")
+    file_bytes = st.file_uploader("upload a text file", type="txt", key="1")
 
     if file_bytes is not None and file_bytes.type.lower() in "text/plain":
         st.success(f"Successfully Uploaded {file_bytes.name}")
